@@ -1,2 +1,2 @@
-# CheggHeroSkipExtension
-Chegg and Course hero chrome skip extension
+# LeetCode Auto Timer
+Auto start leetcode timer after 5 minutes
