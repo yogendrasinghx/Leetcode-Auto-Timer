@@ -1,7 +1,7 @@
 <body>
   <h1>LeetCode Auto Timer Google Chrome Extension</h1>
 
-  <p>This is a Google Chrome extension that automatically starts the timer on the LeetCode platform after 3 minutes of starting a coding challenge. It helps you keep track of the time spent on each question without manually starting the timer.</p>
+  <p>This is a Google Chrome extension that automatically starts the timer on the LeetCode platform just after user click on code editor in a coding challenge. It helps you keep track of the time spent on each question without manually starting the timer.</p>
   
   <h2>Installation</h2>
   <ol>
