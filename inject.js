@@ -21,8 +21,6 @@ function registerCodeBoxEventListener() {
 
 // Click event listener for the code box
 function codeBoxClickListener() {
-  clearTimeout(timer);
-  startTimer();
   logUserAction();
 
   // Remove the event listener after it has been called
