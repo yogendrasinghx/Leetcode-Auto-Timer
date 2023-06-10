@@ -1,12 +1,36 @@
-console.log("Extension Stared !!!");
+console.log("Extension Started !!!");
 
- setTimeout(function(){
-       			
-       		const cssSelector = "div[class='css-0'] > div";
+var interval = setInterval(function(){
+    if (registerCodeBoxEventListener()){
+        clearInterval(interval);
+    }
 
-            const element = document.querySelector(cssSelector);
-            console.log("Starting Timer");
-            console.log(element);
-            element.click();
-            },1000*60*3);
+},500)
 
+// Function to register the event listener
+function registerCodeBoxEventListener() {
+
+    var codeBox = document.querySelector("div.view-lines.monaco-mouse-cursor-text");
+    if (codeBox){
+        // Add event listener for click
+        codeBox.addEventListener("click", codeBoxClickListener);
+        return true
+    }
+    return false
+}
+
+// Click event listener for the code box
+function codeBoxClickListener() {
+  clearTimeout(timer);
+  startTimer();
+  logUserAction();
+
+  // Remove the event listener after it has been called
+  var codeBox = document.querySelector("div.view-lines.monaco-mouse-cursor-text");
+  codeBox.removeEventListener("click", codeBoxClickListener);
+}
+
+// Event handler function
+function logUserAction() {
+  console.log("User started coding");
+}
